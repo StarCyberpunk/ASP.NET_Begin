@@ -1,0 +1,43 @@
+﻿@using SiteWithMySkills.Domain.Entities;
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	int k = 0;
+	var path = Directory.GetCurrentDirectory();
+	int kk = 0;
+}
+<div>Buttons:
+	@Html.ActionLink("Edit","Edit","Tovar",null,new{@class="button"})
+	@Html.ActionLink("Add","AddNew","Tovar",null,new{@class="button"})
+	
+</div>
+<section class="wrapper style1">
+	<div class="container">
+		<div class="row gtr-200">
+			@foreach (Tovar tv in ViewBag.items)
+			{
+				if (k % 3 == 0)
+				{
+					<br/>
+				}
+
+				<section class="col-4 col-12-narrower">
+                    <div class="box highlight">
+                        <i><img src="~/images/tovars/@tv.Img" width="200px" height="200px" /></i>
+						<h3>@tv.Name</h3>
+						<h2>@tv.Price</h2>
+						<p>@tv.Opisanie</p>
+						<button> Buy</button>
+					</div>
+				</section>
+				k++;
+
+			}
+			
+			
+		</div>
+	</div>
+</section>
+

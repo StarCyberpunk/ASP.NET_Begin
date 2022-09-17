@@ -1,0 +1,23 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@Html.ActionLink("Назад","Index","ExcelData",null,new{@class="button"})
+<div class="container">
+	<div class="row">
+		<section class="col-6 col-12-narrower">
+			<div class="box post">
+				<a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
+				<div class="inner">
+					<h3>Выберите файл Excel для загрузки</h3>
+					<form asp-action="AddFile" asp-controller="ExcelData" method="post" enctype="multipart/form-data">
+						<input type="file" name="uploadedFile" /><br>
+						<input type="submit" value="Загрузить" />
+					</form>
+				</div>
+			</div>
+		</section>
+
+	</div>
+</div>
+
+
+
+

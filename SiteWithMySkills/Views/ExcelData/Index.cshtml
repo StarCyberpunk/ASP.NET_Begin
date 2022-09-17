@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<section class="wrapper style1">
+					<div class="container">
+						<div class="row">
+							<section class="col-6 col-12-narrower">
+								<div class="box post">
+									<img src="images/excel.png"class="image left" alt="" />
+									<div class="inner">
+										<h3>Excel</h3>
+						<p>Добавление в базу данных из локального Excel.
+							<br />Отображение данных на сайте.
+							<br/>Добавление своего Excel в БД</p>
+						@Html.ActionLink("Добавить","Add","ExcelData",null,new{@class="button"})
+						@Html.ActionLink("Показать","ShowNew","ExcelData",new{year="2010",month="1"},new{@class="button"})
+										</div>
+								</div>
+							</section>
+							
+						</div>
+					</div>
+				</section>
