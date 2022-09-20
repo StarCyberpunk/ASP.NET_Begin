@@ -25,33 +25,32 @@ namespace SiteWithMySkills.Controllers
         {
             return View();
         }
+        public IActionResult Edit(Guid id)
+        {
+            ViewBag.id = id;
+            return View();
+        }
         public async Task<IActionResult> AddNewTovarInBD(IFormCollection formitems)
         {
             
             var name = formitems["name"];
             var price = formitems["price"].ToString();
             var opicanie = formitems["opicanie"];
-            var img = formitems["img"];
-            Tovar temp = new Tovar { id = Guid.NewGuid(), Name = name, Price = price.ToString(), Opisanie = opicanie };
-            return RedirectToAction("Add");
-        }
-        public async Task<IActionResult> AddFile(IFormFile uploadedFile)
-        {
-            if (uploadedFile != null)
+            var img = formitems.Files[0];
+            if (img.FileName != null)
             {
-                // путь к папке Files
-                string path = "wwwroot/images/Tovars/" + uploadedFile.FileName;
-                // сохраняем файл в папку Files в каталоге wwwroot
+                Tovar temp = new Tovar { id = Guid.NewGuid(), Name = name, Price = price.ToString(), Opisanie = opicanie, Img = img.FileName, IdType = 0 };
+                string path = "/images/Tovars/" + img.FileName;
+               
                 using (var fileStream = new FileStream(_appEnvironment.WebRootPath + path, FileMode.Create))
                 {
-                    await uploadedFile.CopyToAsync(fileStream);
+                    await img.CopyToAsync(fileStream);
                 }
-
-
+                datamanager.TovarsItems.SaveTovarItem(temp);
             }
-
-            return RedirectToAction("Add");
-
+            
+            return RedirectToAction("AddNew");
         }
+        
     }
 }

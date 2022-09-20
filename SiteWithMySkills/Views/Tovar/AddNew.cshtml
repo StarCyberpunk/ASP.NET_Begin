@@ -4,7 +4,8 @@
 @{
 }
 <Div>Фотграфия имя цена описание </Div>
-<form method="post" action="AddNewTovarInBD" >
+<form method="post" action="AddNewTovarInBD" enctype="multipart/form-data">
+    @*TODO:Выберите категорию*@
     <label>Имя товара</label>
     <input type="text" name="name" /><br/>
     <label>Цена</label>

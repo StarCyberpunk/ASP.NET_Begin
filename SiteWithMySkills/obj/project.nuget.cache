@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K8GQpffk7xS2X8z8wCpxlsadTharrBHqeMtCjGeOpVIar6+Z0Ah5JZu2GnIiQ2+R+kmNsyYrIr69VXOB70RvbA==",
+  "dgSpecHash": "a1r2hwVjXKefNg0qz0Pg5CB5v590747LjaFU/h1Esp0imOIEVIax8lthP1vEu0QI3k9Ce6tdie7wtQTOj31VmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\notma\\source\\repos\\SiteWithMySkills2\\SiteWithMySkills\\SiteWithMySkills.csproj",
+  "projectFilePath": "C:\\Users\\notma\\source\\repos\\SiteWithMySkills\\SiteWithMySkills2\\SiteWithMySkills\\SiteWithMySkills.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\notma\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\notma\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

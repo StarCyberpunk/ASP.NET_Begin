@@ -9,7 +9,7 @@
 	int kk = 0;
 }
 <div>Buttons:
-	@Html.ActionLink("Edit","Edit","Tovar",null,new{@class="button"})
+	
 	@Html.ActionLink("Add","AddNew","Tovar",null,new{@class="button"})
 	
 </div>
@@ -30,6 +30,7 @@
 						<h2>@tv.Price</h2>
 						<p>@tv.Opisanie</p>
 						<button> Buy</button>
+						@Html.ActionLink("Edit","Edit","Tovar",new{id=tv.id},new{@class="button"})
 					</div>
 				</section>
 				k++;

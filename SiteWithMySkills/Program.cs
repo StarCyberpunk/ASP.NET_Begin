@@ -71,6 +71,7 @@ app.UseEndpoints(endpoints =>
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
     endpoints.MapControllerRoute("GetDataForYearMonth", "{controller=ExcelData}/{action=ShowNew}/{year=2010}/{month=1}");
+    
 
 });
 app.MapRazorPages();
